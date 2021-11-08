@@ -17,7 +17,7 @@ public class DiscountServlet extends HttpServlet {
         Double price = Double.parseDouble(request.getParameter("Price"));
         Double discount = Double.parseDouble(request.getParameter("submit"));
         Double amount = price* discount*0.01;
-        Double prices  = price -discount;
+        Double prices  = price -amount;
 
         PrintWriter writer = response.getWriter();
         writer.println("<html>");
